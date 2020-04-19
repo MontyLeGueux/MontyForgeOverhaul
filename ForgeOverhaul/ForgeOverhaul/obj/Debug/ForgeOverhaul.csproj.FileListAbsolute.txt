@@ -1,0 +1,11 @@
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\ForgeOverhaul\bin\Win64_Shipping_Client\ForgeOverhaul.dll
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\ForgeOverhaul\bin\Win64_Shipping_Client\ForgeOverhaul.pdb
+C:\Users\Monty\Documents\programming\In progress\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.csprojAssemblyReference.cache
+C:\Users\Monty\Documents\programming\In progress\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.csproj.CoreCompileInputs.cache
+C:\Users\Monty\Documents\programming\In progress\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.csproj.CopyComplete
+C:\Users\Monty\Documents\programming\In progress\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.dll
+C:\Users\Monty\Documents\programming\In progress\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.pdb
+C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.csprojAssemblyReference.cache
+C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.csproj.CoreCompileInputs.cache
+C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.dll
+C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.pdb
