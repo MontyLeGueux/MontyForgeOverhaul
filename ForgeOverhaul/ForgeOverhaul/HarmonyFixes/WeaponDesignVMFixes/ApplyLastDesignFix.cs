@@ -24,12 +24,14 @@ namespace ForgeOverhaul.HarmonyFixes.WeaponDesignVMFixes
                     for (int i = 0; i < 4; i++)
                     {
                         crafting.SwitchToPiece(designToApply.UsedPieces[i]);
+                        crafting.ScaleThePiece(designToApply.UsedPieces[i].CraftingPiece.PieceType, designToApply.UsedPieces[i].ScalePercentage);
                     }
                     return false;
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                InformationManager.DisplayMessage(new InformationMessage("Exception occured when loading last design " + ex.Message));
             }
             return true;
         }

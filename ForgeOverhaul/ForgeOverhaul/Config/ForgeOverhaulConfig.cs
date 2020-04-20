@@ -22,6 +22,9 @@ namespace ForgeOverhaul.Config
 
         [JsonProperty("ExtraCoalEnabled")]
         public bool ExtraCoalEnabled { get; set; }
+
+        [JsonProperty("RestrictPartUnlockPerCategoryEnabled")]
+        public bool RestrictPartUnlockPerCategoryEnabled { get; set; }
     }
 
     public static class ForgeOverhaulConfig
@@ -60,6 +63,7 @@ namespace ForgeOverhaul.Config
                 ConfigSettings.SmeltingStaminaCost = 10;
                 ConfigSettings.SmithingStaminaCost = 10;
                 ConfigSettings.ExtraCoalEnabled = true;
+                ConfigSettings.RestrictPartUnlockPerCategoryEnabled = true;
                 if (error == null)
                 {
                     error = "Config Not Found";

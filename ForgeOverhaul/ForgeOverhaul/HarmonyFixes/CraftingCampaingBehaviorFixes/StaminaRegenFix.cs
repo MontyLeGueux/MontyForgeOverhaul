@@ -54,7 +54,8 @@ namespace ForgeOverhaul.HarmonyFixes.CraftingCampaingBehaviorFixes
                     }
                     if (craftingStamina.Value == __instance.GetMaxHeroCraftingStamina(hero))
                     {
-                        InformationManager.DisplayMessage(new InformationMessage($"{hero.GetName()}'s smithy stamina is full"));
+                        var heroCharacter = Campaign.Current.Characters.First(x => x.IsHero && x.HeroObject.StringId == hero.StringId);
+                        InformationManager.DisplayMessage(new InformationMessage($"{(heroCharacter != null ? heroCharacter.Name : hero.GetName())}'s smithy stamina is full"));
                     }
                 }
             }

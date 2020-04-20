@@ -260,6 +260,8 @@
   <ItemGroup>
     <Compile Include="Config\ForgeOverhaulConfig.cs" />
     <Compile Include="ForgeOverhaulSubModule.cs" />
+    <Compile Include="HarmonyFixes\CraftingCampaingBehaviorFixes\PartResearchLogicFix.cs" />
+    <Compile Include="HarmonyFixes\CraftingCampaingBehaviorFixes\RestrictPartUnlockPerCategory.cs" />
     <Compile Include="HarmonyFixes\CraftingCampaingBehaviorFixes\StaminaRegenFix.cs" />
     <Compile Include="HarmonyFixes\CraftingCampaingBehaviorFixes\MaxStaminaFix.cs" />
     <Compile Include="HarmonyFixes\WeaponDesignVMFixes\ApplyLastDesignFix.cs" />

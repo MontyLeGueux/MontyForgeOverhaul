@@ -12,12 +12,15 @@ namespace ForgeOverhaul.HarmonyFixes.CraftingFixes
     public class RememberLastDesignFix
     {
         private static Dictionary<string, WeaponDesign> designs = new Dictionary<string, WeaponDesign>();
+        private static ItemObject lastWeaponCrafted;
 
         public static Dictionary<string, WeaponDesign> Designs { get => designs;}
+        public static ItemObject LastWeaponCrafted { get => lastWeaponCrafted;}
 
         private static void Postfix(Crafting __instance)
         {
             designs[__instance.CurrentCraftingTemplate.TemplateName.ToString()] = __instance.CurrentWeaponDesign;
+            lastWeaponCrafted = __instance.GetCurrentCraftedItemObject();
         }
     }
 }
