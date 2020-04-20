@@ -1,4 +1,5 @@
-﻿using ForgeOverhaul.HarmonyFixes.CraftingFixes;
+﻿using ForgeOverhaul.Config;
+using ForgeOverhaul.HarmonyFixes.CraftingFixes;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,14 @@ using TaleWorlds.Core;
 namespace ForgeOverhaul.HarmonyFixes.CraftingCampaingBehaviorFixes
 {
     [HarmonyPatch(typeof(CraftingCampaignBehavior), "OpenNewPart")]
-    class RestrictPartUnlockPerCategory
+    class RestrictPartUnlockPerCategoryFix
     {
         private static bool Prefix(CraftingCampaignBehavior __instance)
         {
+			if (!ForgeOverhaulConfig.ConfigSettings.RestrictPartUnlockPerCategoryEnabled) //meh code
+			{
+				return true;
+			}
 			Traverse.Create(__instance).Method("EnsureParts").GetValue();
 			var allParts = (CraftingPiece[])Traverse.Create(__instance).Field("_allCraftingParts").GetValue();
 			var openedParts = (List<CraftingPiece>)Traverse.Create(__instance).Field("_openedParts").GetValue();
