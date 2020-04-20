@@ -11,8 +11,14 @@ namespace ForgeOverhaul.Config
 {
     public class ConfigSettings
     {
-        [JsonProperty("SmithingStaminaEnabled")]
-        public bool SmithingStaminaEnabled { get; set; }
+        [JsonProperty("SmithingStaminaCost")]
+        public int SmithingStaminaCost { get; set; }
+
+        [JsonProperty("SmeltingStaminaCost")]
+        public int SmeltingStaminaCost { get; set; }
+
+        [JsonProperty("RefiningStaminaCost")]
+        public int RefiningStaminaCost { get; set; }
 
         [JsonProperty("ExtraCoalEnabled")]
         public bool ExtraCoalEnabled { get; set; }
@@ -50,7 +56,9 @@ namespace ForgeOverhaul.Config
                 ConfigLoadedSuccessfully = false;
                 ConfigSettings = new ConfigSettings();
 
-                ConfigSettings.SmithingStaminaEnabled = true;
+                ConfigSettings.RefiningStaminaCost = 6;
+                ConfigSettings.SmeltingStaminaCost = 10;
+                ConfigSettings.SmithingStaminaCost = 10;
                 ConfigSettings.ExtraCoalEnabled = true;
                 if (error == null)
                 {

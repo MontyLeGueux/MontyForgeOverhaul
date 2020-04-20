@@ -47,21 +47,11 @@ namespace ForgeOverhaul
         {
             if (ForgeOverhaulConfig.ConfigSettings.ExtraCoalEnabled)
             {
-                if (ForgeOverhaulConfig.ConfigSettings.SmithingStaminaEnabled)
-                {
-                    ReplaceModel<DefaultSmithingModel, CoalStaminaModel>(gameStarterObject);
-                }
-                else
-                {
-                    ReplaceModel<DefaultSmithingModel, CoalNoStaminaModel>(gameStarterObject);
-                }
+                ReplaceModel<DefaultSmithingModel, CoalConfigurableModel>(gameStarterObject);
             }
             else
             {
-                if (!ForgeOverhaulConfig.ConfigSettings.SmithingStaminaEnabled)
-                {
-                    ReplaceModel<DefaultSmithingModel, NoCoalNoStaminaModel>(gameStarterObject);
-                }
+                ReplaceModel<DefaultSmithingModel, NoCoalConfigurableModel>(gameStarterObject);
             }
         }
 

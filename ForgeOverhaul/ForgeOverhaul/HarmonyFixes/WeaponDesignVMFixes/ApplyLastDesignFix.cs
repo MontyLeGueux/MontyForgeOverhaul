@@ -15,15 +15,21 @@ namespace ForgeOverhaul.HarmonyFixes.WeaponDesignVMFixes
     {
         private static bool Prefix(WeaponDesignVM __instance)
         {
-            var crafting = ((Crafting)Traverse.Create(__instance).Field("_crafting").GetValue());
-            if (RememberLastDesignFix.Designs.ContainsKey(crafting.CurrentCraftingTemplate.TemplateName.ToString()))
+            try //very bad code !!
             {
-                var designToApply = RememberLastDesignFix.Designs[crafting.CurrentCraftingTemplate.TemplateName.ToString()];
-                for (int i = 0; i < 4; i++)
+                var crafting = ((Crafting)Traverse.Create(__instance).Field("_crafting").GetValue());
+                if (RememberLastDesignFix.Designs.ContainsKey(crafting.CurrentCraftingTemplate.TemplateName.ToString()))
                 {
-                    crafting.SwitchToPiece(designToApply.UsedPieces[i]);
+                    var designToApply = RememberLastDesignFix.Designs[crafting.CurrentCraftingTemplate.TemplateName.ToString()];
+                    for (int i = 0; i < 4; i++)
+                    {
+                        crafting.SwitchToPiece(designToApply.UsedPieces[i]);
+                    }
+                    return false;
                 }
-                return false;
+            }
+            catch
+            {
             }
             return true;
         }

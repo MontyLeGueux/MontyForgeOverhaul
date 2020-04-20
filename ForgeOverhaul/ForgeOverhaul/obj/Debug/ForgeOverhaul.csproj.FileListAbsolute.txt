@@ -9,3 +9,4 @@ C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverha
 C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.csproj.CoreCompileInputs.cache
 C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.dll
 C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.pdb
+C:\Users\Monty\Documents\programming\Github Repos\MontyForgeOverhaul\ForgeOverhaul\ForgeOverhaul\obj\Debug\ForgeOverhaul.csproj.CopyComplete

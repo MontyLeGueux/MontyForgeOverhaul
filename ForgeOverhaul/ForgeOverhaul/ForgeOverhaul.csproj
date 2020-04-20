@@ -267,6 +267,8 @@
     <Compile Include="HarmonyFixes\RefinementVMFixes\FastRefinementHotkeyFix.cs" />
     <Compile Include="HarmonyFixes\SmeltingVMFixes\FastSmeltHotkeyFix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmithingModels\CoalConfigurableModel.cs" />
+    <Compile Include="SmithingModels\NoCoalConfigurableModel.cs" />
     <Content Include="SubModule.xml" />
   </ItemGroup>
   <ItemGroup>
