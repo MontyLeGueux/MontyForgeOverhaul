@@ -27,12 +27,16 @@ namespace ForgeOverhaul.HarmonyFixes.SmeltingVMFixes
 					{
 						var stackAmount = __instance.CurrentSelectedItem.NumOfItems;
 						var charcoalAmount = itemRoster.GetItemNumber(DefaultItems.Charcoal);
+						var energyCost = Campaign.Current.Models.SmithingModel.GetEnergyCostForSmelting(__instance.CurrentSelectedItem.Item, currentCraftingHero);
+						var heroStamina = smithingBehavior.GetHeroCraftingStamina(currentCraftingHero);
 						for (int i = 0; i < stackAmount
-							&& smithingBehavior.GetHeroCraftingStamina(currentCraftingHero) >= Campaign.Current.Models.SmithingModel.GetEnergyCostForSmelting(__instance.CurrentSelectedItem.Item, currentCraftingHero)
+							&& heroStamina >= energyCost
 							&& charcoalAmount >= 1 ; i++)
 						{
 							smithingBehavior.DoSmelting(currentCraftingHero, ((SmeltingItemVM)Traverse.Create(__instance).Field("_currentSelectedItem").GetValue()).Item);
 							__instance.RefreshList();
+							charcoalAmount--;
+							heroStamina -= energyCost;
 						}	
 					}
 					else

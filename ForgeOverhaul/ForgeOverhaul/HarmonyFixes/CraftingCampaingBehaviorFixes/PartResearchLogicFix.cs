@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using ForgeOverhaul.HarmonyFixes.CraftingFixes;
+using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace ForgeOverhaul.HarmonyFixes.CraftingCampaingBehaviorFixes
 			
 			if (OpenedParts != null)
 			{
-				var openedPartCount = (from x in OpenedParts select x).Count<CraftingPiece>();
+				var openedPartCount = (from x in OpenedParts where RememberLastDesignFix.LastWeaponCrafted.WeaponDesign.Template.Pieces.Contains(x) select x).Count<CraftingPiece>();
 				var researchPointsForNewPart = Campaign.Current.Models.SmithingModel.ResearchPointsNeedForNewPart(openedPartCount);
 				var newPartXP = (int)traverseOpenNewPartXP.GetValue();
 				while (newPartXP > researchPointsForNewPart)
