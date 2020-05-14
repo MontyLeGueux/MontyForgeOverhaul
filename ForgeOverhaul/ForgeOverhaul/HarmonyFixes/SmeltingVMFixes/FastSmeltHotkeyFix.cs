@@ -33,7 +33,7 @@ namespace ForgeOverhaul.HarmonyFixes.SmeltingVMFixes
 							&& heroStamina >= energyCost
 							&& charcoalAmount >= 1 ; i++)
 						{
-							smithingBehavior.DoSmelting(currentCraftingHero, ((SmeltingItemVM)Traverse.Create(__instance).Field("_currentSelectedItem").GetValue()).Item);
+							smithingBehavior.DoSmelting(currentCraftingHero, ((SmeltingItemVM)Traverse.Create(__instance).Field("_currentSelectedItem").GetValue()).EquipmentElement);
 							__instance.RefreshList();
 							charcoalAmount--;
 							heroStamina -= energyCost;
@@ -41,7 +41,7 @@ namespace ForgeOverhaul.HarmonyFixes.SmeltingVMFixes
 					}
 					else
 					{
-						smithingBehavior.DoSmelting(currentCraftingHero, ((SmeltingItemVM)Traverse.Create(__instance).Field("_currentSelectedItem").GetValue()).Item);
+						smithingBehavior.DoSmelting(currentCraftingHero, ((SmeltingItemVM)Traverse.Create(__instance).Field("_currentSelectedItem").GetValue()).EquipmentElement);
 					}
 				}
 			}
